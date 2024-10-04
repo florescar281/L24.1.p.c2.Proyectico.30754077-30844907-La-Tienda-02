@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Tienda</title>
+    <link rel="stylesheet" href="./Style/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <section>
+        <div>
+            <h1>La Tienda</h1>
+            <table id="table">
+                <tr id="row">
+                    <th class="column">Cédula</th>
+                    <th class="column">Producto</th>
+                    <th class="column">Cantidad</th>
+                    <th class="column">Total a pagar</th>
+                </tr>
+            </table>
+            <h4>El producto que mas se vendio:</h4>
+            <h4>El total recolectado de la tienda es:</h4>
+        </div>
+        <div>
+            <form action="Ingresar datos" method="get">
+                <label for="cedula">Cedula</label>
+                <input type="text" name="cedula" id="cedula" required>
+
+                <label for="producto">Producto</label>
+                <input type="text" name="producto" id="producto" required>
+
+                <label for="cantidad">Total</label>
+                <input type="number" name="cantidad" id="cantidad" required min="0">
+
+                <input type="submit" value="Ingresar">
+            </form>
+        </div>
+    </section>
+    <script type="module">
+
+    </script>
+</body>
+</html>
