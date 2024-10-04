@@ -3,9 +3,10 @@ export class vTienda {
         
     }
 
-    mostrarTienda(salida, devolverMayor, devolverTotalFinal){
-        salida.innerHTML += `El articulo que más se vende es: ${devolverMayor}<br>
-        El total de la tienda es de: ${devolverTotalFinal}`;
+    mostrarTienda(salida1, salida2, devolverMayor, devolverTotalFinal){
+        salida1.innerHTML += `${devolverMayor}`;
+        salida2.innerHTML += `${devolverTotalFinal}`;
+
     }
     
 }

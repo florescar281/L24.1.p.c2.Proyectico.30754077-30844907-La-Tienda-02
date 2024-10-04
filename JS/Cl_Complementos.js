@@ -1,8 +1,11 @@
 export class Cl_Complementos {
     constructor() {
-        this.preProducA = 0;
-        this.preProducB = 0;
-        this.preProducC = 0;
     }
 
+    consultarPrecios() {
+        let preProducA = prompt("Ingrese el precio del producto A: ");
+        let preProducB = prompt("Ingrese el precio del producto B: ");
+        let preProducC = prompt("Ingrese el precio del producto C: ");
+        return {preProducA, preProducB, preProducC};
+    }
 }

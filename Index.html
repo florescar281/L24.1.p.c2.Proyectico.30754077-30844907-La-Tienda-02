@@ -19,26 +19,28 @@
                     <th class="column">Total a pagar</th>
                 </tr>
             </table>
-            <h4>El producto que mas se vendio:</h4>
-            <h4>El total recolectado de la tienda es:</h4>
+            <h4 id="salida1">El producto que mas se vendio:</h4>
+            <h4 id="salida2">El total recolectado de la tienda es:</h4>
+            <button id="btn">Registrar venta</button>
         </div>
-        <div>
-            <form action="Ingresar datos" method="get">
+        <div id="intData">
+            <form action="Ingresar datos" method="get" id="form">
                 <label for="cedula">Cedula</label>
                 <input type="text" name="cedula" id="cedula" required>
 
                 <label for="producto">Producto</label>
                 <input type="text" name="producto" id="producto" required>
 
-                <label for="cantidad">Total</label>
+                <label for="cantidad">Cantidad</label>
                 <input type="number" name="cantidad" id="cantidad" required min="0">
 
-                <input type="submit" value="Ingresar">
+                <input type="submit" value="Ingresar" id="submit">
             </form>
         </div>
     </section>
     <script type="module">
-
+        import { Cl_Index } from "./JS/Cl_Index.js";
+        new Cl_Index();
     </script>
 </body>
 </html>
