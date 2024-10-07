@@ -1,4 +1,4 @@
-export class Cl_MTienda {
+export default class Cl_MTienda {
     constructor(){
         this.mayor = 0;
         this.auxNomProduc = " ";

@@ -1,20 +1,25 @@
-export class Cl_VCliente {
-    constructor() {
+export default class Cl_VCliente {
+    constructor(controlador) {
+        this.seccionCliente = document.getElementById("seccionCliente");
+        this.cedCliente = document.getElementById("cedula");
+        this.proCliente = document.getElementById("producto");
+        this.canCliente = document.getElementById("cantidad");
+        this.submit = document.getElementById("submit");
+        this.submit.addEventListener("click", () => {
+            controlador.ingresarCliente({
+                cedula: this.cedCliente.value,
+                producto: this.proCliente.value,
+                cantidad: this.canCliente.value
+            })
+            ocultar();
+        })
     }
 
-    leerDatos() {
-        let cedula = document.getElementById("cedula").value;
-        let producto = document.getElementById("producto").value;
-        let cantidad = document.getElementById("cantidad").value;
-        return {cedula, producto, cantidad};
+    mostrar() {
+        this.seccionCliente.hidden = false;
     }
-    mostrarCliente(salidaTabla, cedula, producto, cantidad, total) {
-        salidaTabla.innerHTML += `
-        <tr>
-            <th>${cedula}</th>
-            <th>${producto}</th>
-            <th>${cantidad}</th>
-            <th>${total}</th>
-        </tr>`;
+
+    ocultar() {
+        this.seccionCliente.hidden = true;
     }
 }

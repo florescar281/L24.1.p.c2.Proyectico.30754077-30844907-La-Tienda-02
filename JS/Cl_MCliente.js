@@ -1,4 +1,4 @@
-export class Cl_MCliente {
+export default class Cl_MCliente {
     constructor({cedula, producto, cantidad}, {preProducA, preProducB, preProducC}){ 
         this.cedula = cedula;
         this.productos = producto;
@@ -37,7 +37,6 @@ export class Cl_MCliente {
     get preProducA(){
         return this._preProducA;
     }
-
 
     set preProducB(Pb){
         this._preProducB = Pb;

@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <section>
+    <section id="sectionTienda">
         <div>
             <h1>La Tienda</h1>
             <table id="table">
@@ -19,10 +19,12 @@
                     <th class="column">Total a pagar</th>
                 </tr>
             </table>
-            <h4 id="salida1">El producto que mas se vendio:</h4>
-            <h4 id="salida2">El total recolectado de la tienda es:</h4>
+            <h4>El producto que mas se vendio: <span id="salida1"></span></h4>
+            <h4>El total recolectado de la tienda es: <span id="salida2"></span></h4>
             <button id="btn">Registrar venta</button>
         </div>
+    </section>
+    <section id="sectionCliente">
         <div id="intData">
             <form action="Ingresar datos" method="get" id="form">
                 <label for="cedula">Cedula</label>
@@ -39,8 +41,8 @@
         </div>
     </section>
     <script type="module">
-        import { Cl_Index } from "./JS/Cl_Index.js";
-        new Cl_Index();
+        import { Cl_Controlador } from "./JS/Cl_Controlador.js";
+        new Cl_Controlador();
     </script>
 </body>
 </html>

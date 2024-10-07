@@ -1,4 +1,4 @@
-export class Cl_Complementos {
+export default class Cl_Complementos {
     constructor() {
     }
 
