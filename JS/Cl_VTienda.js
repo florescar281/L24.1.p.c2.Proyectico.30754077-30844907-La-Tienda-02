@@ -1,6 +1,6 @@
-export default class vTienda {
+export default class Cl_VTienda {
     constructor(){  
-        this.seccionTienda = document.getElementById("seccionTienda");
+        this.seccionTienda = document.getElementById("sectionTienda");
         this.salida1 = document.getElementById("salida1");
         this.salida2 = document.getElementById("salida2");
         this.botonAgregarCliente = document.getElementById("btn");
@@ -12,7 +12,7 @@ export default class vTienda {
     }
 
     mostrar(){
-        this.seccionTienda.hidden = false;
+        this.seccionTienda.hidden= false;
     }
 
     mostrarTienda({
@@ -22,7 +22,7 @@ export default class vTienda {
         total,
         devolverTotalFinal,
         devolverMayor
-    }){
+    })  {
         this.tabla.innerHTML += `
             <tr>
                 <td>${cedula}</td>
@@ -31,7 +31,7 @@ export default class vTienda {
                 <td>${total}</td>
             </tr>
         `;
-        this.salida1.innerHTML = `${devolverMayor()}`;
-        this.salida2.innerHTML = `${devolverTotalFinal()}`
+        this.salida1.innerHTML = `${devolverMayor}`;
+        this.salida2.innerHTML = `${devolverTotalFinal}`;
     }
 }

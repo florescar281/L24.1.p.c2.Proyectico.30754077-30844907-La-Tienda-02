@@ -10,9 +10,7 @@ export class Cl_Controlador {
         this.vTienda = new Cl_VTienda(this);
         this.mTienda = new Cl_MTienda();
         this.complementos = new Cl_Complementos();
-        this.salida1 = document.getElementById("salida1");
-        this.salida2 = document.getElementById("salida2");
-        this.salidaTabla = document.getElementById("table");
+        this.mostrarVistaTienda();
     }    
 
     mostrarVistaCliente() {
@@ -30,12 +28,12 @@ export class Cl_Controlador {
         let cliente = new Cl_MCliente({cedula, producto, cantida}, precios);
         this.mTienda.procesarCliente(cliente);
         this.vTienda.mostrarTienda({
-            cedula: cliente.cedula,
-            producto: cliente.producto,
-            cantidad: cliente.cantidad,
+            cedula: cliente._Cedula,
+            producto: cliente._Productos,
+            cantidad: cliente._Cantidad,
             total: cliente.Total(),
-            devolverTotalFinal: this.mTienda.devolverTotalFinal,
-            devolverMayor: this.mTienda.devolverMayor
+            devolverTotalFinal: this.mTienda.devolverTotalFinal(),
+            devolverMayor: this.mTienda.devolverMayor()
         });
         this.mostrarVistaTienda();
     }
